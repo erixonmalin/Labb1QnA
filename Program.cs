@@ -9,9 +9,9 @@ namespace question_answering
     {
         static void Main(string[] args)
         {
-            Uri qnaEndpoint = new Uri("https://languageserverqnamaker.cognitiveservices.azure.com/");
-            AzureKeyCredential qnaCredential = new AzureKeyCredential("e1eb069b6aef4c28bfbb1a0c393a5178");
-            string qnaProjectName = "HelpFAQ";
+            Uri qnaEndpoint = new Uri("LANGUAGE_ENDPOINT");
+            AzureKeyCredential qnaCredential = new AzureKeyCredential("LANGUAGESERVICE_KEY");
+            string qnaProjectName = "LANGUAGESERVICE_NAME";
             string qnaDeploymentName = "production";
 
             QuestionAnsweringClient qnaClient = new QuestionAnsweringClient(qnaEndpoint, qnaCredential);
@@ -19,8 +19,8 @@ namespace question_answering
             AnswersOptions qnaOptions = new AnswersOptions();
             //qnaOptions.ConfidenceThreshold = 0.85;
 
-            Uri textAnalyticsEndpoint = new Uri("https://cogniservernlpwesteurope.cognitiveservices.azure.com/");
-            AzureKeyCredential textAnalyticsCredential = new AzureKeyCredential("234ceec776184d9c8c69d10eec9d6c32");
+            Uri textAnalyticsEndpoint = new Uri("LANGUAGE_ENDPOINT");
+            AzureKeyCredential textAnalyticsCredential = new AzureKeyCredential("LANGUAGESERVICE_KEY");
             TextAnalyticsClient textAnalyticsClient = new TextAnalyticsClient(textAnalyticsEndpoint, textAnalyticsCredential);
 
             bool continueChatting = true;
